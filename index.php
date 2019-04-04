@@ -64,6 +64,7 @@
             $sql_select = "SELECT * FROM User";
             $stmt = $conn->query($sql_select);
             $registrants = $stmt->fetchAll(); 
+            var_dump($registrants);
             if(count($registrants) > 0) {
                 echo "<h2>People who are registered:</h2>";
                 echo "<table>";
