@@ -69,7 +69,8 @@
                 echo "<thead class='thead-dark'>";
                 echo "<tr><th>Name</th>";
                 echo "<th>Email</th>";
-                echo "<th>Job</th></tr>";
+                echo "<th>Job</th>";
+                echo "<th>Date</th></tr>";
                 echo "</thead>";
                 echo "<tbody>";
                 foreach($registrants as $registrant) {
