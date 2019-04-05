@@ -8,7 +8,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <style>
+        body {
+            margin: 5%;
+        }
+    </style>
  </head>
  <body>
  <h1>Register here!</h1>
@@ -62,7 +66,7 @@
             if(count($registrants) > 0) {
                 echo "<h2>People who are registered:</h2>";
                 echo "<table class='table'>";
-                echo "<thead>";
+                echo "<thead class='thead-dark'>";
                 echo "<tr><th>Name</th>";
                 echo "<th>Email</th>";
                 echo "<th>Job</th></tr>";
