@@ -21,8 +21,9 @@
        Name  <input type="text" name="name" id="name"/></br></br>
        Email <input type="text" name="email" id="email"/></br></br>
        Job <input type="text" name="job" id="job"/></br></br>
-       <input type="submit" name="submit" value="Submit" />
-       <input type="submit" name="load_data" value="Load Data" />
+       <input class="btn btn-primary" type="submit" name="submit" value="Submit" />
+       <input class="btn btn-secondary" type="submit" name="load_data" value="Load Data" />
+       
  </form>
  <?php
     $host = "olegcompany.database.windows.net";
@@ -60,7 +61,6 @@
             $sql_select = "SELECT * FROM [dbo].[User]";
             $stmt = $conn->query($sql_select);
             $registrants = $stmt->fetchAll(); 
-            var_dump($registrants);
             if(count($registrants) > 0) {
                 echo "<h2>People who are registered:</h2>";
                 echo "<table class='table'>";
