@@ -42,15 +42,13 @@
             $name = $_POST['name'];
             $email = $_POST['email'];
             $job = $_POST['job'];
-            $date = date("Y-m-d");
             // Insert data
-            $sql_insert = "INSERT INTO Registration (name, email, job, date) 
-                        VALUES (?,?,?,?)";
+            $sql_insert = "INSERT INTO [dbo].[User] (name, email, job) 
+                        VALUES (?,?,?)";
             $stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(1, $name);
             $stmt->bindValue(2, $email);
             $stmt->bindValue(3, $job);
-            $stmt->bindValue(4, $date);
             $stmt->execute();
         } catch(Exception $e) {
             echo "Failed: " . $e;
